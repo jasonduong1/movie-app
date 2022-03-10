@@ -9,8 +9,8 @@ class ActorsController < ApplicationController
     render json: actor.as_json
   end
 
-  def id1_actor
-    actor = Actor.find(1)
+  def id6_actor
+    actor = Actor.find(6)
     render json: actor.as_json
   end
 end
