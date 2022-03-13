@@ -2,7 +2,7 @@
 GET http://localhost:3000/first_actor
 
 ### request by id
-GET http://localhost:3000/actors
+GET http://localhost:3000/movies/1
 Content-Type: application/json
 
 {
