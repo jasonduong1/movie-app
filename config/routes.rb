@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "first_movie" => "movies#first_movie"
 
   get "/actors" => "actors#by_id"
+  get "/actors/:id" => "actors#by_id"
 end
