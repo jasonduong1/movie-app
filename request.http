@@ -20,3 +20,5 @@ Content-Type: application/json
 {
   "year":2021
 }
+### actors index request
+GET http://localhost:3000/actors
