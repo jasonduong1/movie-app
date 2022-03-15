@@ -2,7 +2,6 @@
 GET http://localhost:3000/movies
 ### movie show request
 GET http://localhost:3000/movies/3
-
 ### movie create request
 POST http://localhost:3000/movies
 Content-Type: application/json
@@ -12,3 +11,5 @@ Content-Type: application/json
   "year": 2017,
   "plot": "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years."
 }
+### movie delete request
+DELETE  http://localhost:3000/movies/6

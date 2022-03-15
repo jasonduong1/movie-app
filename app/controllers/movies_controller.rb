@@ -17,4 +17,9 @@ class MoviesController < ApplicationController
     )
     render json: movie
   end
+
+  def destroy
+    movie = Movie.destroy(params[:id])
+    render json: { message: "Movie has been deleted." }
+  end
 end
