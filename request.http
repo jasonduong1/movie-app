@@ -1,10 +1,14 @@
-###request first actor
-GET http://localhost:3000/first_actor
+### movies index request
+GET http://localhost:3000/movies
+### movie show request
+GET http://localhost:3000/movies/3
 
-### request by id
-GET http://localhost:3000/movies/1
+### movie create request
+POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-  "id": 6
+  "title": "Blade Runner 2049",
+  "year": 2017,
+  "plot": "Young Blade Runner K's discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard, who's been missing for thirty years."
 }

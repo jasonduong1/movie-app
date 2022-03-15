@@ -8,4 +8,13 @@ class MoviesController < ApplicationController
     movie = Movie.find(params[:id])
     render json: movie
   end
+
+  def create
+    movie = Movie.create(
+      title: params[:title],
+      year: params[:year],
+      plot: params[:plot],
+    )
+    render json: movie
+  end
 end
