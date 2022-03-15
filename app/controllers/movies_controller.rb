@@ -22,4 +22,13 @@ class MoviesController < ApplicationController
     movie = Movie.destroy(params[:id])
     render json: { message: "Movie has been deleted." }
   end
+
+  def update
+    movie = Movie.find(params[:id])
+    movie.title = params[:title] || movie.title
+    movie.year = params[:year] || movie.year
+    movie.plot = params[:plot] || movie.plot
+
+    render json: movie
+  end
 end
