@@ -14,6 +14,7 @@ class ActorsController < ApplicationController
       title: params[:title],
       year: params[:year],
       plot: params[:plot],
+      gender: params[:gender],
     )
     render json: actor
   end
@@ -28,6 +29,7 @@ class ActorsController < ApplicationController
     actor.title = params[:title] || actor.title
     actor.year = params[:year] || actor.year
     actor.plot = params[:plot] || actor.plot
+    actor.gender = params[:gender] || actor.gender
 
     render json: actor
   end
