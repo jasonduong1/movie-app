@@ -22,3 +22,5 @@ Content-Type: application/json
 }
 ### actors index request
 GET http://localhost:3000/actors
+### create request
+POST http://localhost:3000/movies

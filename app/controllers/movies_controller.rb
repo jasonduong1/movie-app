@@ -17,7 +17,11 @@ class MoviesController < ApplicationController
       director: params[:director],
       english: params[:english],
     )
-    render json: movie
+    if movie.save
+      render json: movie
+    else
+      render json: { error: movie.errors.objects.first.full_message }, status: 422
+    end
   end
 
   def destroy
@@ -32,7 +36,10 @@ class MoviesController < ApplicationController
     movie.plot = params[:plot] || movie.plot
     movie.director = params[:director] || movie.director
     movie.english = params[:english] || movie.english
-
-    render json: movie
+    if movie.save
+      render json: movie
+    else
+      render json: { error: movie.errors.objects.first.full_message }, status: 422
+    end
   end
 end

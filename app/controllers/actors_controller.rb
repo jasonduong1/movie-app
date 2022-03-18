@@ -10,13 +10,18 @@ class ActorsController < ApplicationController
   end
 
   def create
-    actor = Actor.create(
-      title: params[:title],
-      year: params[:year],
-      plot: params[:plot],
+    actor = Actor.new(
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      known_for: params[:known_for],
       gender: params[:gender],
+      age: params[:age],
     )
-    render json: actor
+    if actor.save
+      render json: actor
+    else
+      render json: { error: actor.errors.objects.first.full_message }, status: 422
+    end
   end
 
   def destroy
@@ -30,7 +35,10 @@ class ActorsController < ApplicationController
     actor.year = params[:year] || actor.year
     actor.plot = params[:plot] || actor.plot
     actor.gender = params[:gender] || actor.gender
-
-    render json: actor
+    if actor.save
+      render json: actor
+    else
+      render json: { error: actor.errors.objects.first.full_message }, status: 422
+    end
   end
 end
