@@ -1,12 +1,12 @@
 class ActorsController < ApplicationController
   def index
-    actor = Actor.all
-    render json: actor
+    @actors = Actor.all
+    render template: "actors/index"
   end
 
   def show
-    actor = Actor.find(params[:id])
-    render json: actor
+    @actor = Actor.find(params[:id])
+    render template: "actors/show"
   end
 
   def create
