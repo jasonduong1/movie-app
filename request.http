@@ -13,6 +13,8 @@ Content-Type: application/json
 }
 ### movie delete request
 DELETE  http://localhost:3000/movies/6
+### actor delete request
+DELETE  http://localhost:3000/actors/10.json
 ### movie delete request
 PATCH   http://localhost:3000/movies/7
 Content-Type: application/json
@@ -23,4 +25,12 @@ Content-Type: application/json
 ### actors index request
 GET http://localhost:3000/actors
 ### create request
-POST http://localhost:3000/movies
+POST http://localhost:3000/actors.json
+Content-Type: application/json
+
+{
+  "first_name": "Robert",
+  "last_name": "Downey, Jr.",
+  "known_for": "Iron Man",
+  "movie_id": 2
+}
