@@ -55,3 +55,13 @@ Content-Type: application/json
   "email": "jason@test.com",
   "password": "password"
 }
+### Movies create with auth
+POST http://localhost:3000/movies.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "title": "Spider-Man: No Way Home",
+  "year": 2017,
+  "plot": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
+}
