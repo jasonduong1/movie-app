@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   patch "/actors/:id" => "actors#update"
 
   post "/users" => "users#create"
+
+  post "/sessions" => "sessions#create"
 end
