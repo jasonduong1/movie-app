@@ -34,3 +34,14 @@ Content-Type: application/json
   "known_for": "Iron Man",
   "movie_id": 2
 }
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "jason",
+  "email": "jason@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
