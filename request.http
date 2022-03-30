@@ -65,3 +65,11 @@ Content-Type: application/json
   "year": 2017,
   "plot": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
 }
+### Movie_gernre create
+POST http://localhost:3000/movie_genres.json
+Content-Type: application/json
+
+{
+  "movie_id": 1,
+  "genre_id": 2
+}
