@@ -1,6 +1,6 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgxNzE3NTl9.P_NFu75jIPp4E-sUo8A0blSAJRFR9O5gZ0lmEx-6JkU
 ### movies index request
-GET http://localhost:3000/movies
+GET http://localhost:3000/movies.json
 ### movie show request
 GET http://localhost:3000/movies/3
 ### movie create request
@@ -24,7 +24,7 @@ Content-Type: application/json
   "year":2021
 }
 ### actors index request
-GET http://localhost:3000/actors
+GET http://localhost:3000/actors.json
 ### create request
 POST http://localhost:3000/actors.json
 Content-Type: application/json
